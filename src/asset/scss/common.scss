@@ -1,0 +1,165 @@
+
+@import './var.mod.scss';
+
+@import './reset.scss';
+@import './icon.css';
+@import './status.scss';
+@import './markdown.scss';
+@import './media.scss';
+
+
+
+html {
+	-webkit-text-size-adjust: none;
+}
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+	color: #333;
+	background-color: $bgcolor;
+	overflow-x: hidden;
+	// font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', 'sans-serif';
+}
+
+img{
+	background: url(../img/avatar.jpg) no-repeat;
+	background-size: 50px 50px;
+}
+
+.wait{
+	$d: 40px;
+	width: $d !important;
+	height: $d !important;
+	line-height: $d + 2;
+	left: 50%;
+	top: $headerHeight + 40;
+	margin-left: -$d/2;
+	margin-top: -$d/2;
+	font-size: $d;
+	text-align: center;
+	color: #42b983;
+	position: fixed;
+	z-index: -1;
+	animation: 1s rotate linear infinite;
+}
+@keyframes rotate{
+	0%{ transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); }
+}
+
+
+.fit:after{
+	content: '.';
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+
+.omit{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+hr{
+	border-bottom: 1px solid #eee;
+	margin: 10px;
+	height: 0;
+}
+
+.alert{
+	$w: 280px;
+	width: $w;
+	left: 50%;
+	// top: 30%;
+	margin-left: -$w/2;
+	margin-top: $headerHeight;	
+	position: fixed;
+	padding: 20px;
+	background: #fff;
+	box-sizing: border-box;
+	box-shadow: 0 5px 15px #555;
+	text-align: center;
+	color: #f70;
+	z-index: 20000;
+	p{
+		padding: 5px;
+		line-height: 1.7;
+		word-break: break-all;
+		// text-align: left;
+		text-indent: 10px;
+	}
+}
+.alert-matte{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: 15000;
+}
+
+
+.btn{
+	$w: 100px;
+	$h: 30px;
+	width: $w;
+	height: $h;
+	line-height: $h;
+	margin: 10px auto;
+	padding: 0;
+	border: none;
+	display: block;
+	background-color: $stdColor;
+	color: #fff;
+	border-radius: $h/2;
+	font-size: 14px;
+}
+
+.lbtn{
+	$h: 40px;
+	width: 100%;
+	height: $h;
+	line-height: $h;
+	padding: 0;
+	border: none;
+	display: block;
+	background-color: $stdColor;
+	color: #fff;
+	margin: 10px auto;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+
+.subtitle {
+	width: 150px;
+	line-height: 1.8;
+	margin: 20px auto !important;
+	padding: 10px !important;
+	
+	border-bottom: 2px solid $stdColor;
+
+	text-align: center;
+	// background: #f0f0f0;
+	position: relative;
+	// border-radius: 10px;
+	strong {
+		color: $stdColor;
+	}
+}
+
+
+.pannel{
+	margin: 10px 0;
+	padding: 10px;
+	background: #fff;
+
+	
+}
+
+
+

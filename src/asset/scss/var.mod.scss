@@ -1,0 +1,64 @@
+
+$sideOffset: 100px;
+
+$headerHeight: 50px;
+
+$bgcolor: #eee;
+
+$stdColor: #42b983;
+
+$stdColor2: #0A7;
+
+$hColor: #f0f0f0;
+
+
+$topColor: #c00;
+$askColor: #0A7;
+$goodColor: #f70;
+$jobColor: #999;
+$shareColor: #96f;
+
+$maxWidth: 800px;
+
+
+%omit{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+%dialog{
+	$w: 250px;
+	width: $w;
+	left: 50%;
+	// top: 30%;
+	margin-left: -$w/2;
+	margin-top: $headerHeight;
+
+	position: fixed;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 5px 15px #555;
+	text-align: center;
+}
+
+%fit{
+	&:after{
+		content: '.';
+		height: 0;
+		display: block;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+
+%focus{
+	transition: all .3s ease;
+	&:focus{
+		border-color: $stdColor;
+		box-shadow: 0 0 6px $stdColor;
+	}
+}
